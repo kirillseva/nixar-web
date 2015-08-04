@@ -6,14 +6,14 @@
         h1.md-toolbar-tools Nixar
       md-content(layout-padding='')
         md-list.listdemoListControls
-          md-list-item
+          md-list-item(ng:click="activate('about')")
             p About
-          md-list-item
+          md-list-item(ng:click="activate('get-started')")
             p Get started
           md-divider
           md-list-item(ng-repeat='node in menu' 
                        ng-class="{active: active === node}"
-                       ng-click="activate(node)")
+                       ng-click="activate(node.text)")
             p  {{ node.text }}
     md-content(flex='' layout-padding='0')
       bg-splitter(orientation="vertical")

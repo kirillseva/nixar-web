@@ -6,9 +6,7 @@ angular
           goto-anchor = (x)->
             #$location.hash x
             scroll.to x
-          $scope.active = null
-          $scope.activate = (node)->
-            $scope.active = node
-            goto-anchor node.text
+          $scope.activate = (text)->
+            goto-anchor text
           $scope.menu = content
           
