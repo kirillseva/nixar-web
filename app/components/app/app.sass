@@ -25,12 +25,15 @@ $cont-color: #22223A
         color: white
         >md-list
           >md-list-item
+            &.primary
+              font-weight: 800
+              color: #7E868E
             >.md-button
               &:hover
                 $color: white
                 background: rgba($color, 0.05)
-            >.md-divider
-              border: 1px solid white
+          >md-divider
+            border: 1px solid #7E868E
     >md-content
       overflow: hidden
       background: $cont-color

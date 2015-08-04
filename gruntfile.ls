@@ -1,12 +1,26 @@
 module.exports = (grunt)->
-  files = 
-    require \./.compiled/app-structure.json
-  make-pair = (mask-from, mask-to) ->
-    make-pair = (source)->
-      ".compiled/#{source.replace mask-from, mask-to}" : source
-    files.filter(-> it.index-of(mask-from) > -1).map make-pair
+  convert-mapping = (file)->
+      ".compiled/#{file.dest}": file.src.0
+  make-pair = (from, to)->
+    grunt.file.expand-mapping(["app/components/**/*#from", "./*#from", "app/*#from"], "", {ext: to, extDot: 'last'  }).map(convert-mapping)
+  
+  mapping = 
+    * to: \.js
+      from: [\.ls, \.coffee, \.ts, \.js]
+    * to: \.css
+      from: [\.css, \sass]
+    * to: \.html
+      from: [\.html, \.jade]
+  
   key = (o)->
       Object.keys(o).0
+      
+  get-compiled = (to)->
+    (mapping.filter(-> it.to is to)).0.from.map( (from)->  make-pair(from, to).map(key) ).reduce( (a,b)-> a.concat(b)).map(-> __dirname + \/ +  it )
+  
+  
+  
+  
   require(\time-grunt) grunt
   load-module-first = (x)->
       | Object.keys(x).0.index-of('module') > -1 => -1
@@ -41,6 +55,7 @@ module.exports = (grunt)->
     jade: make-pair \.jade, \.html
     sass: make-pair \.sass, \.css
      
+  console.log("html",get-compiled('.html').filter(-> it.index-of(\app/index) is -1)  )
   path = do
     js = -> "client/js/#it"
     app: js \app.js
@@ -64,10 +79,10 @@ module.exports = (grunt)->
       options:
          single-quotes: yes
       app1:
-         files: files.live.map(key).filter(-> it.index-of(\client.js) > -1).map(-> "#it": [it])
+         files: get-compiled('.js').filter(-> it.index-of(\client.js) > -1).map(-> "#it": [it])
     ngtemplates:
       app:
-        src: files.jade.map(key).filter(-> it.index-of(\app/index) is -1)
+        src: ".compiled/app/components/**/*.html"
         dest: path.templates
         options:
           url: (url) ->
@@ -106,14 +121,9 @@ module.exports = (grunt)->
                 * path.app-module
                 * \.compiled/xonom.service.js
                 * path.templates
-            temp =
-                * \.compiled/app/components/terminal/1.term.client.js
-                ...
-            lives =
-                files.live.map(key).filter(-> it.index-of(\client.js) > -1)
-            coffees =
-                files.coffee.map(key).filter(-> it.index-of(\client.js) > -1)
-            staf ++ temp ++ lives ++ coffees
+            js =
+                get-compiled(".js").filter(-> it.index-of(\client.js) > -1)
+            staf ++ js
         dest: path.app
         options:
           banner: "(function( window ){ \n 'use strict';"
@@ -124,7 +134,7 @@ module.exports = (grunt)->
             * \lib/_bower.css
             ...
           const app = 
-            files.sass.map(key)
+            get-compiled(".css")
           bower ++ app
         dest: \client/css/app.css
     min :
@@ -143,7 +153,18 @@ module.exports = (grunt)->
             dest: \.compiled
             flatten: no
             filter: \isFile
-          ...
+          * expand: yes
+            cwd: ''
+            src: \app/components/**/*.css
+            dest: \.compiled
+            flatten: no
+            filter: \isFile
+          * expand: yes
+            cwd: ''
+            src: \app/components/**/*.html
+            dest: \.compiled
+            flatten: no
+            filter: \isFile
     removelogging:
       dist:
         src: "js/application.js"
@@ -159,8 +180,8 @@ module.exports = (grunt)->
            * \newer:livescript
            * \newer:coffee
            * \xonom
-           * \ngtemplates
            * \copy
+           * \ngtemplates
            * \concat:basic
            * \concat:extra
            * \shell:start
@@ -179,7 +200,7 @@ module.exports = (grunt)->
     xonom:
       options:
         input:
-          controllers: files.live.map(key).filter (.index-of(\api.server.js) > -1)
+          controllers: get-compiled(".js").filter (.index-of(\api.server.js) > -1)
         output:
            angular-service: \.compiled/xonom.service.js
            express-route: \.compiled/xonom.route.js
