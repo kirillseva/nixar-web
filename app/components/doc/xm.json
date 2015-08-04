@@ -1,0 +1,10 @@
+{
+    "node_modules": {
+        "tty.js": "^0.2.14-1"
+    },
+    "node_modules_dev": {},
+    "bower_components": {
+        "angular-markdown-directive": "~0.3.1"
+    },
+    "bower_components_dev": {}
+}

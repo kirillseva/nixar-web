@@ -1,0 +1,28 @@
+@mixin pad($t)
+  padding: $t 15px
+  
+
+.doc
+  >.doc-item
+    &:last-child
+      min-height: 1000px
+    >h2
+      text-shadow: 0px 0px 10px #C52824
+      @include pad(0px)
+      font-weight: 100
+      margin: 0
+      margin-top: 30px
+    >p 
+      color: #CCC
+      @include pad(0px)
+    >btf-markdown
+      >h2
+        @include pad(0px)
+        color: #CCC
+        font-weight: 100
+      >p
+        @include pad(0px)
+      >pre
+        @include pad(20px)
+        $white: white 
+        background: rgba($white, 0.1)

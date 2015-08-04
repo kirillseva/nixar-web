@@ -1,0 +1,7 @@
+.doc-item(ng:repeat="item in menu" id="{{item.text}}")
+   h2(ui-sref="item") {{item.text}}
+   p {{item.descr}}
+   btf-markdown.
+     ```Bash
+     fs | filter js | map "cat *" | exec
+     ```
