@@ -6,7 +6,7 @@ angular
           data =
               * text: \maximum
                 descr: 'Calculate maximum number in numeric list'
-              * text: \content
+              * text: \file
                 descr: 'Read content of the file'
               * text: \minimum
                 descr: 'Calculate minimum number of the list'
@@ -32,20 +32,18 @@ angular
                 descr: 'Concat lines into one line'
               * text: \fs
                 descr: 'Search files and directories by mask'
-              * text: \exec
-                descr: 'Execute line as command'
               * text: \sum
                 descr: 'Calculate sum of numbers of all lines'
               * text: \unique
                 descr: 'Get only unique lines'
               * text: \filter
                 descr: 'Filter by regexp'
-              * text: \append
-                descr: 'Append text to line'
+              * text: \match
+                descr: 'Find matches'
               * text: \average
                 descr: 'Calculate average of number from all lines'
               * text: \map
-                descr: 'Extract part of the line by regexp'
+                descr: 'Transform the line'
               * text: \find
                 descr: 'Find first line by regexp'
               * text: \replace
