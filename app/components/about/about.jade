@@ -1,0 +1,39 @@
+include ../core/mixins/common
+.about
+  .header
+    .header-body
+      +bar('white')
+  .about-body
+      .photos
+        .person(ng:repeat="person in persons")
+          .photo
+             img(ng:src="{{person.image}}")
+          .name {{person.name}}
+          .desc {{person.desc}}
+      .desc: .desc-body We are independent team who design and develop AngularJS, NodeJS, IOS applications
+      .our-services
+          h5.title-about.animated-down-1s.hidden.visible.animated-1s.fadeInDown Our services
+          .list
+            ul
+              li Wireframing
+              li Design
+              li Frontend development
+              li Backend development
+          .list
+            ul
+              li Prototyping
+              li Concept Development
+              li AngularJS Development
+              li NodeJS Development
+      .our-services
+         h5 Contacts
+         .list
+           ul
+             li
+               .bold Work inquiries
+               .how a.stegno@gmail.com
+         .list
+           ul
+             li
+               .bold Location
+               .how Kyiv, Ukraine

@@ -1,0 +1,62 @@
+@mixin logo
+  //margin-top: 10px
+  //font-family: 'Jura', cursive
+  font-family: 'Fredoka One'
+  font-size: 25px
+  color: #7cb28a
+  //color: transparent
+  //font-weight: bold
+  //background-image: url(../images/logo.png)
+  background-repeat: no-repeat
+  $w: 236px
+  $h: 139px
+  $p: 40
+  $w2: $w / 100 * $p
+  $h2: $h / 100 * $p
+  min-width: $w2
+  min-height: $h2
+  background-size: $w2 $h2
+  a
+    text-decoration: none
+    color: #7cb28a
+  &.white
+    //background-image: url(../images/logo-white.png)
+    color: white
+    a
+      color: white
+  
+    
+
+@mixin bar
+  .bar
+    display: inline-block
+    margin-bottom: 75px
+    text-align: left
+    line-height: 50px
+    vertical-align: middle
+    .name
+      padding: 7px 11px
+      margin-left: -24px
+      @include logo
+      &.white
+        color: white
+      background-repeat: no-repeat
+      box-sizing: border-box
+      vertical-align: top
+      display: inline-block
+      font-size: 50px
+      width: 300px
+      height: 70px
+    .menu
+      line-height: 50px
+      vertical-align: top
+      display: inline-block
+      width: 700px
+      text-align: right
+      .menu-item
+        padding: 15px
+        display: inline-block
+        cursor: pointer
+        a
+          text-decoration: none
+          color: inherit

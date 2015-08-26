@@ -1,0 +1,71 @@
+include ../core/mixins/common
+.landing.landing-animation
+  .fixed
+    +bar
+  .header
+    .navs 
+      +bar('white')
+      .text
+        .title
+          | New shell commands
+        .descr
+          | Joyable equivalents for existent linux commands
+  .body
+    .terminal-panel
+      .demo-terminal(ng:class="terminalClass").animate
+        .text(ng:style="style(demo)" 
+              pipe="{{demo.body}}") 
+        .cursor |
+        .results
+          .result(ng:repeat="result in demo.result track by $index")
+            div(colored="{{result}}") 
+  .bottom
+    .install
+      //.step-body
+      //  .step 
+      //    span 1. Download and Install 
+      //    a(href="https://nodejs.org/") nodejs
+      //.step-body
+      //  .step 
+      //    span 2. Open console and run
+      .command npm install -g nixar
+    .benefits
+      .benefit(ng:repeat="benefit in benefits")
+        .icon
+          .icon-body(ng:class="{ animated: benefit.icon.length > 1 }")
+            span(ng:repeat="icon in benefit.icon")
+              i.fa(class="fa-{{icon}}" ng:if="!isSvg(icon)")
+              object(type="image/svg+xml" data="images/{{icon}}.svg" ng:if="isSvg(icon)")
+        .title {{benefit.title}}
+        .desc {{benefit.desc}}
+    .example-area
+        .example-area-top
+        .examples
+          .header Most handy command combinations
+          .example(ng:repeat="example in examples")
+            .desc {{example.desc}}
+            .body(pipe="{{example.body}}")
+  .footer
+    .row
+       .title Checkout all commands
+       md-button.md-raised.md-primary(ui-sref="docs") Docs
+    .last(layout="row")
+      .social(flex="")
+        .buttons
+          ul(ng-social-buttons='' 
+             data-url="'http://news.mistinfo.com/'" 
+             data-title="'test'"
+             data-description="'test2'"
+             data-image="'http://s3.mistinfo.com/32/d8/32d8eab76f4c242f665bda66b5edc6c5.jpg'")
+            li.ng-social-facebook Facebook
+            li.ng-social-pinterest Pinterest
+            li.ng-social-github(user='esvit', repository='ng-table') GitHub
+            li.ng-social-google-plus Google+
+            li.ng-social-twitter Twitter
+            li.ng-social-github-forks(user='esvit', repository='ng-table') Forks
+            
+      .copyright(flex="") 
+        | Copyright © 2015 Nixar. All rights reserved
+      .logo(flex="") nixar
+      
+      

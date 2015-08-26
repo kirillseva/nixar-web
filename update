@@ -1,0 +1,4 @@
+npm remove nixar
+npm install nixar
+cd node_modules/nixar
+nixardoc

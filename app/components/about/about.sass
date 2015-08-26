@@ -1,0 +1,62 @@
+@import "../core/mixins/common"
+.about
+  .header
+    height: 80px
+    background: #7cb28a
+    .header-body
+      width: 1000px
+      text-align: left
+      display: inline-block
+      color: white
+      @include bar
+  text-align: center
+  .about-body
+    display: inline-block
+    width: 1000px
+    >h1 
+    >.photos
+      margin-top: 100px
+      >.person
+        display: inline-block
+        width: 300px
+        text-align: center
+        border: 1px solid #E0DBDB
+        border-radius: 5px
+        margin: 20px
+        padding: 40px
+        >.photo
+          display: inline-block
+          border-radius: 100px
+          width: 100px
+          height: 100px
+          overflow: hidden
+          >img
+            width: 100px
+            height: 100px
+        >.name
+          font-size: 22px
+          padding: 20px
+        >.desc
+          color: gray
+    >.desc
+      text-align: center
+      padding: 80px
+      >.desc-body
+        display: inline-block
+        max-width: 600px
+        font-size: 30px
+    >.our-services
+      text-align: left
+      >h5
+        border-bottom: 1px solid #CCC
+        color: gray
+      >.list
+        display: inline-block
+        width: 300px
+        >ul
+          list-style: none
+          >li
+            .bold
+              font-weight: bold
+        
+    
