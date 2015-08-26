@@ -1,46 +1,108 @@
+@import "../core/mixins/common"
 @mixin pad($t)
   padding: $t 15px
   
 
+$logo-color: #7cb28a
+$side-color: white
+$cont-color: white
 .doc
-  >.doc-item
-    &.about
-      @include pad(0px)
-      height: 64px
-      background: #38384D
-    &.get-started
-      height: 250px
-      .desc
-        @include pad(0px)
-      .panel
-        @include pad(20px)
-        margin: 15px
-        margin-left: 56px
-        border: 1px solid orange
-        color: orange
-        font-weight: 800
-        width: 140px
-        background-color: rgba(255, 165, 0, 0.18)
-    &.bottom
-      min-height: 1000px
-    &.program
-      >h2
-        //text-shadow: 0px 0px 10px #C52824
-        @include pad(0px)
-        font-weight: 100
-        margin: 0
-        margin-top: 30px
-      >p 
-        color: #CCC
-        @include pad(0px)
-      >btf-markdown
-        >h2
-          @include pad(0px)
-          color: #CCC
-          font-weight: 100
-        >p
-          @include pad(0px)
-        >pre
-          @include pad(20px)
-          $white: white 
-          background: rgba($white, 0.1)
+  .doc-body
+    >md-sidenav
+      height: 100vh
+      overlflow-y: scroll
+      overlflow-x: hidden
+      &.md-locked-open
+        $width: 200px
+        width: $width
+        min-width: $width
+        max-width: $width
+      >md-toolbar
+        >.md-toolbar-tools
+          .logo
+            padding-left: 15px
+            @include logo
+            font-size: 40px
+            margin-top: 0
+            margin-left: 16
+          cursor: pointer
+          background: $logo-color
+          //font-size: 30px !important
+          //text-transform: uppercase
+          //padding-left: 50px
+          //font-weight: bold
+          //border: 0px
+      >md-content
+        background: $side-color
+        >md-list
+          color: #3A8C4F
+          >md-list-item
+            &.primary
+              font-weight: 800
+            >.md-button
+              &:hover
+                $color: white
+                background: rgba($color, 0.05)
+          >md-divider
+            border: 1px solid #7E868E
+    >md-content
+      overflow: hidden
+      background: $cont-color
+      height: 100vh
+      padding: 0
+      >.split-panes
+        $header-height: 64px
+        >div
+          background: transparent
+          overflow-y: scroll
+          &.split-handler
+            height: 5px
+            background-color: #A5A0A0
+            box-shadow: inset 0px 0px 5px #5D5858, 0px 0px 5px #3A3535
+          &.term
+            background: #474F59
+            height: 100%
+          &.commands
+            >.command
+              &.bottom
+                min-height: 1000px
+              &.program
+                >h2
+                  //text-shadow: 0px 0px 10px #C52824
+                  @include pad(0px)
+                  font-weight: 100
+                  margin: 0
+                  margin-top: 30px
+                >p 
+                  color: gray
+                  @include pad(0px)
+              >.examples
+                padding: 10px
+                >.example
+                  margin-bottom: 10px
+                  border: 1px solid #CCC
+                  code
+                    white-space: pre
+                    padding-bottom: 20px
+                    padding-left: 10px
+                    display: block
+                    background: rgba(247, 245, 245, 0.56)
+                  >h1
+                    padding-left: 15px
+                    font-size: 14px
+                  >h2
+                    @include pad(0px)
+                    color: #CCC
+                    font-weight: 100
+                  h3
+                    font-size: 13px
+                    margin-left: 15px
+                  >p
+                    @include pad(0px)
+                  >pre
+                    @include pad(20px)
+                    $white: white 
+                    background: rgba(107, 101, 101, 0.08)
+              
+
+

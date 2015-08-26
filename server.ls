@@ -1,3 +1,4 @@
+path = require \path
 require \xonom
  .object \$config, require(\./../config.json)
  .run ($xonom)->
@@ -8,10 +9,15 @@ require \xonom
       cwd: require('path').resolve(process.cwd!, \../demo)
       static: require(\path).resolve(__dirname, \../client)
       shell: \bash
+    app.use require(\body-parser).json!
+    console.log "#{__dirname}/node_modules/nixar/compiled-commands/*"
     $xonom.object \$router, app
-    #router.use require(\body-parser).json!
- .run "#__dirname/app/**/*.service.server.js"
- .run "#__dirname/app/**/*.route.server.js"
- .run "#__dirname/xonom.route.js"
+ .run "#{__dirname}/app/**/*.service.server.js"
+ .run "#{__dirname}/app/**/*.route.server.js"
+ .object \p, require \prelude-ls
+ .object \repo, { commands: [], docs: [] }
+ .run path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + \/*
+ .run path.resolve(__dirname, "../node_modules/nixar/docs") + \/*
+ .run "#{__dirname}/xonom.route.js"
  .run ($router, $config)->
     $router.listen!

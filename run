@@ -1,14 +1,10 @@
 killall -9 grunt
 killall -9 node
 killall -9 npm
-git add -u
-git add .
-git commit -m "development"
-git push origin master
-xm update
 lsc -c gruntfile
 rm -rf .compiled
 mkdir .compiled
+nixardoc
 grunt $1
 rm gruntfile.js
 DEL gruntfile.js

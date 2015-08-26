@@ -6,15 +6,13 @@ angular.module do
       * \xonom
       * \ngMaterial
       * \ngSanitize
-      * \btford.markdown
       * \bgDirectives
-      * \ngDisqus
+      * \ngSocial
       ...
 
 angular
   .module \app
-  .config ($location-provider, $md-theming-provider, $disqus-provider)->
-     $disqusProvider.setShortname 'nixar'
+  .config ($location-provider, $md-theming-provider)->
      $mdThemingProvider.definePalette do 
        *  \amazingPaletteName
        *  '50': 'ffebee'

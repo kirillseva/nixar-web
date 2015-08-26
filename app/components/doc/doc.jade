@@ -1,18 +1,25 @@
-.doc-item.about(id="about")
-.doc-item.get-started(id="get-started")
-   .desc
-     h2 Get started
-     ul
-       li Install nodejs
-       li Run
-   .panel
-      | npm install -g nixar
-     
-.doc-item.program(ng:repeat="item in menu" id="{{item.text}}")
-   h2 {{item.text}}
-   p {{item.descr}}
-   btf-markdown.
-     ```Bash
-     fs | filter js | map "cat *" | exec
-     ```
-.doc-item.bottom
+.doc.sidenavdemoBasicUsage(layout='column')
+  section.doc-body(layout='row' flex='')
+    md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left'
+                                     md-is-locked-open="$mdMedia('gt-md')")
+      md-toolbar.md-theme-indigo(ui-sref="landing")
+        h1.md-toolbar-tools: .logo.white nixar
+      md-content(layout-padding='')
+        md-list.listdemoListControls
+          md-list-item(ng-repeat='node in menu track by $index' 
+                       ng-click="activate(node.name)")
+            p  {{ node.name }}
+    md-content(flex='' 
+               layout-padding='0')
+      bg-splitter(orientation="vertical")
+        bg-pane.commands.scroll
+          .command.program(ng:repeat="item in menu track by $index" 
+                           id="{{item.name}}")
+            h2 {{item.name}}
+            p {{item.desc}}
+            .examples
+              .example(ng:repeat="example in item.examples track by $index" 
+                       ng:bind-html="example")
+          .command.bottom
+        bg-pane.term(min-height="10")
+         include ../terminal/terminal.jade

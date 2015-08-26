@@ -1,7 +1,7 @@
 angular
   .module \app
   .config ($state-provider, $url-router-provider) ->
-       $url-router-provider.otherwise \/
+       $url-router-provider.otherwise \landing
        $state-provider.state do
           * \root
           * url: \/

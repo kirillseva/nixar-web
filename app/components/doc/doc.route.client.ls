@@ -3,7 +3,7 @@ angular
   .config ($state-provider, $url-router-provider) ->
        $state-provider.state do
           * \doc
-          * url: \/
+          * url: \doc
             parent: \root
             views:
                'content':
