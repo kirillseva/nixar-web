@@ -1,0 +1,98 @@
+.terminal {
+  /**
+   * Page */ }
+  .terminal .window {
+    padding-top: 15px;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; }
+  .terminal .maximized .window {
+    border: none;
+    box-shadow: none; }
+  .terminal .dark .window {
+    box-shadow: none; }
+  .terminal .bar {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 13px;
+    padding: 1px 0;
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    color: #fafafa; }
+  .terminal .title {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    font-size: 11px;
+    cursor: default; }
+  .terminal .tab {
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: -2px;
+    float: left;
+    cursor: pointer; }
+    .terminal .tab:hover {
+      font-weight: bold; }
+  .terminal .grip {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 22px;
+    height: 22px;
+    cursor: se-resize;
+    z-index: -1;
+    background: transparent; }
+  .terminal .terminal {
+    font-size: 17px;
+    padding: 17px;
+    color: #f0f0f0;
+    background-color: transparent !important; }
+  .terminal .reverse-video {
+    color: #000;
+    background: #f0f0f0; }
+  .terminal h1 {
+    font: 20px/1.5 sans-serif;
+    background: #333;
+    margin: -25px -25px 0 -25px;
+    height: 30px;
+    padding: 10px 25px;
+    color: white;
+    border-top: #e15729 solid 10px; }
+  .terminal #open, .terminal #lights {
+    font: 20px/1.5 sans-serif;
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    margin: 0;
+    background: none;
+    border: none;
+    -webkit-appearance: none; }
+  .terminal #open {
+    top: 10px;
+    background: #333; }
+  .terminal #lights {
+    font-size: 18px;
+    height: 46px;
+    top: 60px;
+    background: #555; }
+  .terminal #open:hover, .terminal #lights:hover {
+    color: slategrey;
+    background: white; }
+  .terminal #open:active, .terminal #lights:active {
+    color: orange; }
+  .terminal #help {
+    font: 12px/1.5 sans-serif;
+    color: #999;
+    position: fixed;
+    bottom: 10px;
+    left: 10px; }
+  .terminal .dark h1, .terminal .dark #help {
+    display: none; }
+
+/*# sourceMappingURL=terminal.css.map */

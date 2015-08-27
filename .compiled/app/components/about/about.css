@@ -1,0 +1,103 @@
+.about {
+  text-align: center; }
+  .about .header {
+    height: 80px;
+    background: #7cb28a; }
+    .about .header .header-body {
+      width: 1000px;
+      text-align: left;
+      display: inline-block;
+      color: white; }
+      .about .header .header-body .bar {
+        display: inline-block;
+        margin-bottom: 75px;
+        text-align: left;
+        line-height: 50px;
+        vertical-align: middle; }
+        .about .header .header-body .bar .name {
+          padding: 7px 11px;
+          margin-left: -24px;
+          font-family: "Fredoka One";
+          font-size: 25px;
+          color: #7cb28a;
+          background-repeat: no-repeat;
+          min-width: 94.4px;
+          min-height: 55.6px;
+          background-size: 94.4px 55.6px;
+          background-repeat: no-repeat;
+          box-sizing: border-box;
+          vertical-align: top;
+          display: inline-block;
+          font-size: 50px;
+          width: 300px;
+          height: 70px; }
+          .about .header .header-body .bar .name a {
+            text-decoration: none;
+            color: #7cb28a; }
+          .about .header .header-body .bar .name.white {
+            color: white; }
+            .about .header .header-body .bar .name.white a {
+              color: white; }
+          .about .header .header-body .bar .name.white {
+            color: white; }
+        .about .header .header-body .bar .menu {
+          line-height: 50px;
+          vertical-align: top;
+          display: inline-block;
+          width: 700px;
+          text-align: right; }
+          .about .header .header-body .bar .menu .menu-item {
+            padding: 15px;
+            display: inline-block;
+            cursor: pointer; }
+            .about .header .header-body .bar .menu .menu-item a {
+              text-decoration: none;
+              color: inherit; }
+  .about .about-body {
+    display: inline-block;
+    width: 1000px; }
+    .about .about-body > .photos {
+      margin-top: 100px; }
+      .about .about-body > .photos > .person {
+        display: inline-block;
+        width: 300px;
+        text-align: center;
+        border: 1px solid #E0DBDB;
+        border-radius: 5px;
+        margin: 20px;
+        padding: 40px; }
+        .about .about-body > .photos > .person > .photo {
+          display: inline-block;
+          border-radius: 100px;
+          width: 100px;
+          height: 100px;
+          overflow: hidden; }
+          .about .about-body > .photos > .person > .photo > img {
+            width: 100px;
+            height: 100px; }
+        .about .about-body > .photos > .person > .name {
+          font-size: 22px;
+          padding: 20px; }
+        .about .about-body > .photos > .person > .desc {
+          color: gray; }
+    .about .about-body > .desc {
+      text-align: center;
+      padding: 80px; }
+      .about .about-body > .desc > .desc-body {
+        display: inline-block;
+        max-width: 600px;
+        font-size: 30px; }
+    .about .about-body > .our-services {
+      text-align: left; }
+      .about .about-body > .our-services > h5 {
+        border-bottom: 1px solid #CCC;
+        color: gray; }
+      .about .about-body > .our-services > .list {
+        display: inline-block;
+        width: 300px; }
+        .about .about-body > .our-services > .list > ul {
+          list-style: none; }
+          .about .about-body > .our-services > .list > ul > li .bold {
+            font-weight: bold; }
+
+/*# sourceMappingURL=about.css.map */

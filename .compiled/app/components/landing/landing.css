@@ -1,0 +1,415 @@
+@keyframes type {
+  from {
+    width: 0; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes blink {
+  to {
+    opacity: 0; } }
+@keyframes slidy {
+  0% {
+    left: 0%; }
+  25% {
+    left: 0%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -100%; }
+  75% {
+    left: -200%; }
+  95% {
+    left: -200%; }
+  100% {
+    left: 0%; } }
+@keyframes colorize {
+  from {
+    color: #CCC; }
+  100% {
+    color: #b2f3c1; } }
+@keyframes colorize-white {
+  from {
+    color: #CCC; }
+  100% {
+    color: white; } }
+.pipe {
+  color: #C2DA99; }
+
+.colored {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 6.5s;
+  animation-name: colorize; }
+  .colored.code {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 6.5s;
+    animation-name: colorize-white; }
+
+.space {
+  display: inline-block;
+  min-width: 10px; }
+
+.landing {
+  background: linear-gradient(135deg, rgba(123, 178, 138, 0.95) 0%, rgba(248, 248, 156, 0.95) 100%); }
+  .landing .fixed {
+    color: #7cb28a;
+    top: -80px;
+    z-index: 999999;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 0px 1px gray; }
+    .landing .fixed .bar {
+      display: inline-block;
+      margin-bottom: 75px;
+      text-align: left;
+      line-height: 50px;
+      vertical-align: middle; }
+      .landing .fixed .bar .name {
+        padding: 7px 11px;
+        margin-left: -24px;
+        font-family: "Fredoka One";
+        font-size: 25px;
+        color: #7cb28a;
+        background-repeat: no-repeat;
+        min-width: 94.4px;
+        min-height: 55.6px;
+        background-size: 94.4px 55.6px;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 50px;
+        width: 300px;
+        height: 70px; }
+        .landing .fixed .bar .name a {
+          text-decoration: none;
+          color: #7cb28a; }
+        .landing .fixed .bar .name.white {
+          color: white; }
+          .landing .fixed .bar .name.white a {
+            color: white; }
+        .landing .fixed .bar .name.white {
+          color: white; }
+      .landing .fixed .bar .menu {
+        line-height: 50px;
+        vertical-align: top;
+        display: inline-block;
+        width: 700px;
+        text-align: right; }
+        .landing .fixed .bar .menu .menu-item {
+          padding: 15px;
+          display: inline-block;
+          cursor: pointer; }
+          .landing .fixed .bar .menu .menu-item a {
+            text-decoration: none;
+            color: inherit; }
+  .landing .header {
+    text-align: center;
+    height: 100px;
+    height: 300px; }
+    .landing .header .navs {
+      display: inline-block;
+      width: 1000px;
+      color: white; }
+      .landing .header .navs .bar {
+        display: inline-block;
+        margin-bottom: 75px;
+        text-align: left;
+        line-height: 50px;
+        vertical-align: middle; }
+        .landing .header .navs .bar .name {
+          padding: 7px 11px;
+          margin-left: -24px;
+          font-family: "Fredoka One";
+          font-size: 25px;
+          color: #7cb28a;
+          background-repeat: no-repeat;
+          min-width: 94.4px;
+          min-height: 55.6px;
+          background-size: 94.4px 55.6px;
+          background-repeat: no-repeat;
+          box-sizing: border-box;
+          vertical-align: top;
+          display: inline-block;
+          font-size: 50px;
+          width: 300px;
+          height: 70px; }
+          .landing .header .navs .bar .name a {
+            text-decoration: none;
+            color: #7cb28a; }
+          .landing .header .navs .bar .name.white {
+            color: white; }
+            .landing .header .navs .bar .name.white a {
+              color: white; }
+          .landing .header .navs .bar .name.white {
+            color: white; }
+        .landing .header .navs .bar .menu {
+          line-height: 50px;
+          vertical-align: top;
+          display: inline-block;
+          width: 700px;
+          text-align: right; }
+          .landing .header .navs .bar .menu .menu-item {
+            padding: 15px;
+            display: inline-block;
+            cursor: pointer; }
+            .landing .header .navs .bar .menu .menu-item a {
+              text-decoration: none;
+              color: inherit; }
+      .landing .header .navs .text {
+        text-align: center; }
+        .landing .header .navs .text .title {
+          font-size: 40px;
+          display: inline-block;
+          width: 100%;
+          margin-bottom: 20px; }
+        .landing .header .navs .text .descr {
+          display: inline-block;
+          font-size: 20px;
+          max-width: 250px; }
+  .landing .body {
+    position: relative; }
+    .landing .body > .circle {
+      border-radius: 100px;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border: 1px solid #C7DD9A;
+      background: #91B991;
+      color: #BFD899;
+      text-align: center;
+      line-height: 100px; }
+    .landing .body .terminal-panel {
+      position: relative;
+      z-index: 100;
+      text-align: center;
+      overflow: hidden; }
+      .landing .body .terminal-panel .demo-terminal {
+        background: #474F59;
+        border-radius: 5px 5px 0px 0px;
+        display: inline-block;
+        height: 450px;
+        transition: height 0.3s;
+        max-width: 1000px;
+        width: 1000px;
+        padding: 30px;
+        box-sizing: border-box;
+        text-align: left;
+        overflow: hidden; }
+        .landing .body .terminal-panel .demo-terminal .text {
+          text-align: left;
+          display: inline-block;
+          color: wheat;
+          font-size: 23px;
+          white-space: nowrap;
+          overflow: hidden;
+          visibility: hidden; }
+        .landing .body .terminal-panel .demo-terminal .cursor {
+          vertical-align: top;
+          margin-top: -3px;
+          color: white;
+          font-size: 25px;
+          display: inline-block;
+          animation: blink 1s infinite; }
+        .landing .body .terminal-panel .demo-terminal .results {
+          margin-top: 8px;
+          padding-top: 8px;
+          border-top: 1px dashed #867F7F;
+          color: #CCC;
+          font-size: 23px;
+          opacity: 0;
+          visibility: hidden; }
+        .landing .body .terminal-panel .demo-terminal.animate > .text {
+          visibility: visible;
+          animation: type steps(60, end); }
+        .landing .body .terminal-panel .demo-terminal.animate > .results {
+          visibility: visible;
+          animation: fadeIn 0.3s forwards;
+          animation-delay: 5s;
+          animation-iteration-count: 1; }
+  .landing .bottom {
+    background: #FFF;
+    min-height: 700px;
+    padding-bottom: 100px;
+    text-align: center; }
+    .landing .bottom > .install {
+      padding-top: 20px;
+      text-align: center; }
+      .landing .bottom > .install .step-body {
+        display: block;
+        text-align: center; }
+        .landing .bottom > .install .step-body .step {
+          display: inline-block;
+          text-align: left;
+          width: 300px;
+          color: gray; }
+      .landing .bottom > .install .command {
+        box-sizing: border-box;
+        display: inline-block;
+        border-radius: 3px;
+        width: 300px;
+        text-transform: lowercase;
+        padding: 15px;
+        background: #FF8900;
+        color: white;
+        font-weight: bold;
+        font-size: 25px; }
+        .landing .bottom > .install .command:hover {
+          background: #ff9d14; }
+    .landing .bottom > .benefits {
+      margin-top: 50px;
+      margin-bottom: 50px; }
+      .landing .bottom > .benefits > .benefit {
+        width: 400px;
+        text-align: center;
+        display: inline-block;
+        padding: 50px; }
+        .landing .bottom > .benefits > .benefit > .icon {
+          display: inline-block;
+          margin: 50px;
+          border-radius: 100px;
+          width: 100px;
+          height: 100px;
+          background: #7cb28a;
+          line-height: 100px;
+          vertical-align: middle;
+          color: white;
+          overflow: hidden; }
+          .landing .bottom > .benefits > .benefit > .icon .icon-body.animated {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            text-align: left;
+            animation: 10s slidy infinite; }
+          .landing .bottom > .benefits > .benefit > .icon .icon-body > span {
+            padding: 0px;
+            margin: 0px;
+            width: 100px;
+            height: 100px; }
+            .landing .bottom > .benefits > .benefit > .icon .icon-body > span > object {
+              text-align: center;
+              width: 50px;
+              padding-top: 20px;
+              margin-left: 25px;
+              vertical-align: middle; }
+            .landing .bottom > .benefits > .benefit > .icon .icon-body > span > i.fa {
+              width: 100px;
+              padding-top: 20px;
+              vertical-align: middle;
+              font-size: 60px;
+              text-align: center; }
+              .landing .bottom > .benefits > .benefit > .icon .icon-body > span > i.fa.fa-github {
+                font-size: 118px;
+                margin-top: -8px;
+                background: white;
+                padding: 0px;
+                color: #7cb28a; }
+        .landing .bottom > .benefits > .benefit > .title {
+          font-size: 25px; }
+        .landing .bottom > .benefits > .benefit > .desc {
+          font-size: 18px;
+          color: gray; }
+    .landing .bottom > .example-area {
+      position: relative;
+      background-color: #F0F0F0;
+      background: -moz-linear-gradient(top, #f0f0f0 0%, white 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0f0f0), color-stop(100%, white));
+      background: -webkit-linear-gradient(top, #f0f0f0 0%, white 100%);
+      background: -o-linear-gradient(top, #f0f0f0 0%, white 100%);
+      background: -ms-linear-gradient(top, #f0f0f0 0%, white 100%);
+      background: linear-gradient(to bottom, #f0f0f0 0%, white 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 );
+      padding-top: 30px 50px; }
+      .landing .bottom > .example-area > .example-area-top {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 10px;
+        background-image: url(../images/bg-footer.png);
+        background-repeat: repeat-x; }
+      .landing .bottom > .example-area > .examples {
+        text-align: left;
+        display: inline-block;
+        box-sizing: border-box; }
+        .landing .bottom > .example-area > .examples > .header {
+          box-sizing: border-box;
+          font-size: 27px;
+          text-align: left;
+          height: auto;
+          color: gray;
+          padding: 60px 0px 20px 0px; }
+        .landing .bottom > .example-area > .examples .example {
+          overflow: hidden;
+          box-sizing: border-box; }
+          .landing .bottom > .example-area > .examples .example .desc {
+            display: inline-block;
+            width: 500px;
+            padding: 20px 0px;
+            box-sizing: border-box; }
+          .landing .bottom > .example-area > .examples .example .body {
+            display: inline-block;
+            background: #474F59;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 500px;
+            margin-bottom: 10px;
+            color: white;
+            border-radius: 5px; }
+  .landing .footer {
+    padding: 0px 50px;
+    background: url(../images/pipes.jpg);
+    background-size: cover;
+    height: 400px;
+    text-align: center; }
+    .landing .footer > .row {
+      padding: 95px; }
+      .landing .footer > .row > .title {
+        font-size: 35px;
+        color: gray; }
+      .landing .footer > .row > .md-button {
+        padding: 10px 50px;
+        margin: 20px;
+        background: #7cb28a; }
+    .landing .footer > .last > .social {
+      text-align: left;
+      padding-left: 30px; }
+      .landing .footer > .last > .social .buttons {
+        display: inline-block;
+        max-width: 400px; }
+    .landing .footer > .last > .copyright {
+      text-align: center;
+      padding-top: 20px;
+      color: gray; }
+    .landing .footer > .last > .logo {
+      font-family: "Fredoka One";
+      font-size: 25px;
+      color: #7cb28a;
+      background-repeat: no-repeat;
+      min-width: 94.4px;
+      min-height: 55.6px;
+      background-size: 94.4px 55.6px;
+      color: #F0F0F0;
+      text-align: right;
+      padding-right: 30px;
+      font-size: 50px;
+      margin-top: -10px;
+      background-position: right; }
+      .landing .footer > .last > .logo a {
+        text-decoration: none;
+        color: #7cb28a; }
+      .landing .footer > .last > .logo.white {
+        color: white; }
+        .landing .footer > .last > .logo.white a {
+          color: white; }
+
+/*# sourceMappingURL=landing.css.map */
