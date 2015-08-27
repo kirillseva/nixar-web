@@ -2,7 +2,7 @@
 (function(){
   var path;
   path = require('path');
-  require('xonom').object('$config', require('./../config.json')).run(function($xonom){
+  require('xonom').run(function($xonom){
     var tty, app;
     tty = require('tty.js');
     app = tty.createServer({
@@ -18,7 +18,7 @@
   }).run(__dirname + "/app/**/*.service.server.js").run(__dirname + "/app/**/*.route.server.js").object('p', require('prelude-ls')).object('repo', {
     commands: [],
     docs: []
-  }).run(path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + '/*').run(path.resolve(__dirname, "../node_modules/nixar/docs") + '/*').run(__dirname + "/xonom.route.js").run(function($router, $config){
+  }).run(path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + '/*').run(path.resolve(__dirname, "../node_modules/nixar/docs") + '/*').run(__dirname + "/xonom.route.js").run(function($router){
     return $router.listen();
   });
 }).call(this);
