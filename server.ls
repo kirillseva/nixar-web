@@ -4,7 +4,7 @@ require \xonom
  .run ($xonom)->
     tty = require \tty.js
     app = tty.create-server do
-      port: 8080
+      port: process.env.PORT || 80
       users: []
       cwd: require('path').resolve(process.cwd!, \../demo)
       static: require(\path).resolve(__dirname, \../client)
