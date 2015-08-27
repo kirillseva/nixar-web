@@ -1,6 +1,5 @@
 path = require \path
 require \xonom
- .object \$config, require(\./../config.json)
  .run ($xonom)->
     tty = require \tty.js
     app = tty.create-server do
@@ -19,5 +18,5 @@ require \xonom
  .run path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + \/*
  .run path.resolve(__dirname, "../node_modules/nixar/docs") + \/*
  .run "#{__dirname}/xonom.route.js"
- .run ($router, $config)->
+ .run ($router)->
     $router.listen!
