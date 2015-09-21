@@ -206,9 +206,9 @@ module.exports = (grunt)->
            express-route: \.compiled/xonom.route.js
     shell:
         start:
-          command: 'killall -9 node; cd .compiled; forever stop server.js; forever start server.js'
+          command: 'killall -9 node; forever stop server.js; forever start server.js'
         node:
-          command: 'killall -9 node; node .compiled/server.js'
+          command: 'killall -9 node; node server.js'
     newer:
       options:
         cache: \.cache
@@ -316,7 +316,7 @@ module.exports = (grunt)->
       * name
       * npm-tasks.filter(-> it.configs.index-of(name) > -1).map(-> it.register)
   
-  grunt.load-npm-tasks('grunt-newer')
+  grunt.load-npm-tasks(\grunt-newer)
   
   load \default
   load \debug

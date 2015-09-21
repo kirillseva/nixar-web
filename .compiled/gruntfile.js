@@ -255,10 +255,10 @@ module.exports = function(grunt){
     },
     shell: {
       start: {
-        command: 'killall -9 node; cd .compiled; forever stop server.js; forever start server.js'
+        command: 'killall -9 node; forever stop server.js; forever start server.js'
       },
       node: {
-        command: 'killall -9 node; node .compiled/server.js'
+        command: 'killall -9 node; node server.js'
       }
     },
     newer: {
