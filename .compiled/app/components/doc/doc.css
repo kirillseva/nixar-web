@@ -53,8 +53,8 @@
     .doc .doc-body > md-content > .split-panes > div.term {
       background: #474F59;
       height: 100%; }
-    .doc .doc-body > md-content > .split-panes > div.commands > .command.bottom {
-      min-height: 1000px; }
+    .doc .doc-body > md-content > .split-panes > div.commands > .command .name {
+      color: #7cb28a; }
     .doc .doc-body > md-content > .split-panes > div.commands > .command.program > h2 {
       padding: 0px 15px;
       font-weight: 100;

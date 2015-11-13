@@ -15,7 +15,7 @@
         bg-pane.commands.scroll
           .command.program(ng:repeat="item in menu track by $index" 
                            id="{{item.name}}")
-            h2 {{item.name}}
+            h2.name {{item.name}}
             p {{item.desc}}
             .examples
               .example(ng:repeat="example in item.examples track by $index" 

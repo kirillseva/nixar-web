@@ -1,7 +1,8 @@
 include ../core/mixins/common
+.fixed
+  +bar
+.background
 .landing.landing-animation
-  .fixed
-    +bar
   .header
     .navs 
       +bar('white')
@@ -50,22 +51,18 @@ include ../core/mixins/common
        .title Checkout all commands
        md-button.md-raised.md-primary(ui-sref="docs") Docs
     .last(layout="row")
-      .social(flex="")
+      .last-item.social(flex="")
         .buttons
           ul(ng-social-buttons='' 
-             data-url="'http://news.mistinfo.com/'" 
-             data-title="'test'"
+             data-url="'http://nixar.work/'" 
+             data-title="'Joyable equivalents for existent linux commands'"
              data-description="'test2'"
              data-image="'http://s3.mistinfo.com/32/d8/32d8eab76f4c242f665bda66b5edc6c5.jpg'")
-            li.ng-social-facebook Facebook
-            li.ng-social-pinterest Pinterest
-            li.ng-social-github(user='esvit', repository='ng-table') GitHub
-            li.ng-social-google-plus Google+
-            li.ng-social-twitter Twitter
-            li.ng-social-github-forks(user='esvit', repository='ng-table') Forks
+            li.ng-social-github(user='askucher', repository='nixar') GitHub
+            li.ng-social-github-forks(user='askucher', repository='nixar') Forks
             
-      .copyright(flex="") 
-        | Copyright © 2015 Nixar. All rights reserved
-      .logo(flex="") nixar
+      .last-item.copyright(flex="") 
+        .text Copyright © 2015 Nixar. All rights reserved
+      .last-item.logo(flex="") nixar
       
       

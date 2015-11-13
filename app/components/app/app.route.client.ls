@@ -4,7 +4,7 @@ angular
        $url-router-provider.otherwise \landing
        $state-provider.state do
           * \root
-          * url: \/
+          * url: ''
             views:
                '' :
                   template-url: \app

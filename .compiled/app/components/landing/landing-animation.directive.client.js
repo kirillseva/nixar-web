@@ -6,12 +6,13 @@ angular.module('app').directive('landingAnimation', function(){
       var win;
       win = $(window);
       return win.scroll(function(){
-        var pos, h, s;
+        var pos;
         pos = win.scrollTop();
-        h = -80 + pos / 5;
-        $('.fixed').css('top', h < 0 ? h : 0);
-        s = 450 - pos * 2;
-        return $('.demo-terminal').css('height', s > 0 ? s : 0);
+        if (pos < 100) {
+          return $('.fixed').removeClass('active');
+        } else {
+          return $('.fixed').addClass('active');
+        }
       });
     }
   };

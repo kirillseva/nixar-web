@@ -7274,10 +7274,17 @@ md-tooltip {
         margin-bottom: 75px;
         text-align: left;
         line-height: 50px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        width: 1000px; }
+        @media only screen and (max-width: 600px) {
+          .about .header .header-body .bar {
+            margin-bottom: 25px; } }
+        @media only screen and (max-width: 1000px) {
+          .about .header .header-body .bar {
+            width: 100%; } }
         .about .header .header-body .bar .name {
           padding: 7px 11px;
-          margin-left: -24px;
+          margin-left: -15px;
           font-family: "Fredoka One";
           font-size: 25px;
           color: #7cb28a;
@@ -7290,8 +7297,10 @@ md-tooltip {
           vertical-align: top;
           display: inline-block;
           font-size: 50px;
-          width: 300px;
           height: 70px; }
+          @media only screen and (max-width: 1000px) {
+            .about .header .header-body .bar .name {
+              margin-left: 0px; } }
           .about .header .header-body .bar .name a {
             text-decoration: none;
             color: #7cb28a; }
@@ -7302,13 +7311,14 @@ md-tooltip {
           .about .header .header-body .bar .name.white {
             color: white; }
         .about .header .header-body .bar .menu {
+          float: right;
           line-height: 50px;
           vertical-align: top;
           display: inline-block;
-          width: 700px;
+          width: auto;
           text-align: right; }
           .about .header .header-body .bar .menu .menu-item {
-            padding: 15px;
+            padding: 10px 15px;
             display: inline-block;
             cursor: pointer; }
             .about .header .header-body .bar .menu .menu-item a {
@@ -7426,8 +7436,8 @@ md-tooltip {
     .doc .doc-body > md-content > .split-panes > div.term {
       background: #474F59;
       height: 100%; }
-    .doc .doc-body > md-content > .split-panes > div.commands > .command.bottom {
-      min-height: 1000px; }
+    .doc .doc-body > md-content > .split-panes > div.commands > .command .name {
+      color: #7cb28a; }
     .doc .doc-body > md-content > .split-panes > div.commands > .command.program > h2 {
       padding: 0px 15px;
       font-weight: 100;
@@ -7495,14 +7505,14 @@ md-tooltip {
   from {
     color: #CCC; }
   100% {
-    color: #b2f3c1; } }
+    color: #7cb28a; } }
 @keyframes colorize-white {
   from {
     color: #CCC; }
   100% {
     color: white; } }
 .pipe {
-  color: #C2DA99; }
+  color: #7cb28a; }
 
 .colored {
   animation-duration: 1s;
@@ -7519,80 +7529,116 @@ md-tooltip {
   display: inline-block;
   min-width: 10px; }
 
-.landing {
-  background: linear-gradient(135deg, rgba(123, 178, 138, 0.95) 0%, rgba(248, 248, 156, 0.95) 100%); }
-  .landing .fixed {
-    color: #7cb28a;
-    top: -80px;
-    z-index: 999999;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    height: 80px;
-    background-color: white;
-    box-shadow: 0px 0px 1px gray; }
-    .landing .fixed .bar {
+.fixed {
+  color: #7cb28a;
+  top: -65px;
+  z-index: 999999;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  height: 65px;
+  background-color: white;
+  transition: top 0.2s;
+  box-shadow: 0px 0px 1px gray; }
+  .fixed .bar {
+    display: inline-block;
+    margin-bottom: 75px;
+    text-align: left;
+    line-height: 50px;
+    vertical-align: middle;
+    width: 1000px; }
+    @media only screen and (max-width: 600px) {
+      .fixed .bar {
+        margin-bottom: 25px; } }
+    @media only screen and (max-width: 1000px) {
+      .fixed .bar {
+        width: 100%; } }
+    .fixed .bar .name {
+      padding: 7px 11px;
+      margin-left: -15px;
+      font-family: "Fredoka One";
+      font-size: 25px;
+      color: #7cb28a;
+      background-repeat: no-repeat;
+      min-width: 94.4px;
+      min-height: 55.6px;
+      background-size: 94.4px 55.6px;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      vertical-align: top;
       display: inline-block;
-      margin-bottom: 75px;
-      text-align: left;
+      font-size: 50px;
+      height: 70px; }
+      @media only screen and (max-width: 1000px) {
+        .fixed .bar .name {
+          margin-left: 0px; } }
+      .fixed .bar .name a {
+        text-decoration: none;
+        color: #7cb28a; }
+      .fixed .bar .name.white {
+        color: white; }
+        .fixed .bar .name.white a {
+          color: white; }
+      .fixed .bar .name.white {
+        color: white; }
+    .fixed .bar .menu {
+      float: right;
       line-height: 50px;
-      vertical-align: middle; }
-      .landing .fixed .bar .name {
-        padding: 7px 11px;
-        margin-left: -24px;
-        font-family: "Fredoka One";
-        font-size: 25px;
-        color: #7cb28a;
-        background-repeat: no-repeat;
-        min-width: 94.4px;
-        min-height: 55.6px;
-        background-size: 94.4px 55.6px;
-        background-repeat: no-repeat;
-        box-sizing: border-box;
-        vertical-align: top;
+      vertical-align: top;
+      display: inline-block;
+      width: auto;
+      text-align: right; }
+      .fixed .bar .menu .menu-item {
+        padding: 10px 15px;
         display: inline-block;
-        font-size: 50px;
-        width: 300px;
-        height: 70px; }
-        .landing .fixed .bar .name a {
+        cursor: pointer; }
+        .fixed .bar .menu .menu-item a {
           text-decoration: none;
-          color: #7cb28a; }
-        .landing .fixed .bar .name.white {
-          color: white; }
-          .landing .fixed .bar .name.white a {
-            color: white; }
-        .landing .fixed .bar .name.white {
-          color: white; }
-      .landing .fixed .bar .menu {
-        line-height: 50px;
-        vertical-align: top;
-        display: inline-block;
-        width: 700px;
-        text-align: right; }
-        .landing .fixed .bar .menu .menu-item {
-          padding: 15px;
-          display: inline-block;
-          cursor: pointer; }
-          .landing .fixed .bar .menu .menu-item a {
-            text-decoration: none;
-            color: inherit; }
+          color: inherit; }
+  .fixed.active {
+    top: 0px;
+    transition: top 0.7s; }
+
+.background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  background-image: url(http://res.cloudinary.com/nixar-work/image/upload/v1444918309/polygons_llf5iv.png);
+  height: 750px;
+  width: 100%;
+  z-index: 0; }
+
+.landing {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1; }
   .landing .header {
     text-align: center;
     height: 100px;
     height: 300px; }
     .landing .header .navs {
       display: inline-block;
-      width: 1000px;
+      width: 100%;
       color: white; }
       .landing .header .navs .bar {
         display: inline-block;
         margin-bottom: 75px;
         text-align: left;
         line-height: 50px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        width: 1000px; }
+        @media only screen and (max-width: 600px) {
+          .landing .header .navs .bar {
+            margin-bottom: 25px; } }
+        @media only screen and (max-width: 1000px) {
+          .landing .header .navs .bar {
+            width: 100%; } }
         .landing .header .navs .bar .name {
           padding: 7px 11px;
-          margin-left: -24px;
+          margin-left: -15px;
           font-family: "Fredoka One";
           font-size: 25px;
           color: #7cb28a;
@@ -7605,8 +7651,10 @@ md-tooltip {
           vertical-align: top;
           display: inline-block;
           font-size: 50px;
-          width: 300px;
           height: 70px; }
+          @media only screen and (max-width: 1000px) {
+            .landing .header .navs .bar .name {
+              margin-left: 0px; } }
           .landing .header .navs .bar .name a {
             text-decoration: none;
             color: #7cb28a; }
@@ -7617,13 +7665,14 @@ md-tooltip {
           .landing .header .navs .bar .name.white {
             color: white; }
         .landing .header .navs .bar .menu {
+          float: right;
           line-height: 50px;
           vertical-align: top;
           display: inline-block;
-          width: 700px;
+          width: auto;
           text-align: right; }
           .landing .header .navs .bar .menu .menu-item {
-            padding: 15px;
+            padding: 10px 15px;
             display: inline-block;
             cursor: pointer; }
             .landing .header .navs .bar .menu .menu-item a {
@@ -7641,7 +7690,8 @@ md-tooltip {
           font-size: 20px;
           max-width: 250px; }
   .landing .body {
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     .landing .body > .circle {
       border-radius: 100px;
       width: 100px;
@@ -7662,6 +7712,7 @@ md-tooltip {
       .landing .body .terminal-panel .demo-terminal {
         background: #474F59;
         border-radius: 5px 5px 0px 0px;
+        bax-shadow: rgba(51, 51, 51, 0.43137) 0px 0px 108px;
         display: inline-block;
         height: 450px;
         transition: height 0.3s;
@@ -7671,6 +7722,9 @@ md-tooltip {
         box-sizing: border-box;
         text-align: left;
         overflow: hidden; }
+        @media only screen and (max-width: 1000px) {
+          .landing .body .terminal-panel .demo-terminal {
+            border-radius: 0px; } }
         .landing .body .terminal-panel .demo-terminal .text {
           text-align: left;
           display: inline-block;
@@ -7703,9 +7757,11 @@ md-tooltip {
           animation-delay: 5s;
           animation-iteration-count: 1; }
   .landing .bottom {
+    position: relative;
+    z-index: 2;
     background: #FFF;
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ecailles.png);
     min-height: 700px;
-    padding-bottom: 100px;
     text-align: center; }
     .landing .bottom > .install {
       padding-top: 20px;
@@ -7738,14 +7794,15 @@ md-tooltip {
         width: 400px;
         text-align: center;
         display: inline-block;
-        padding: 50px; }
+        padding: 50px;
+        box-sizing: border-box; }
         .landing .bottom > .benefits > .benefit > .icon {
           display: inline-block;
           margin: 50px;
           border-radius: 100px;
           width: 100px;
           height: 100px;
-          background: #7cb28a;
+          background: #0E99A4;
           line-height: 100px;
           vertical-align: middle;
           color: white;
@@ -7779,7 +7836,7 @@ md-tooltip {
                 margin-top: -8px;
                 background: white;
                 padding: 0px;
-                color: #7cb28a; }
+                color: #0E99A4; }
         .landing .bottom > .benefits > .benefit > .title {
           font-size: 25px; }
         .landing .bottom > .benefits > .benefit > .desc {
@@ -7802,16 +7859,28 @@ md-tooltip {
         left: 0px;
         width: 100%;
         height: 10px;
-        background-image: url(../images/bg-footer.png);
+        background-image: -owg-linear-gradient(to bottom right, transparent, #F0F0F0);
+        background-image: -webkit-linear-gradient(to bottom right, transparent, #F0F0F0);
+        background-image: -moz-linear-gradient(to bottom right, transparent, #F0F0F0);
+        background-image: -o-linear-gradient(to bottom right, transparent, #F0F0F0);
+        background-image: linear-gradient(to bottom right, transparent, #F0F0F0);
         background-repeat: repeat-x; }
       .landing .bottom > .example-area > .examples {
-        text-align: left;
         display: inline-block;
         box-sizing: border-box; }
+        @media only screen and (max-width: 320px) {
+          .landing .bottom > .example-area > .examples {
+            text-align: center; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          .landing .bottom > .example-area > .examples {
+            text-align: center; } }
+        @media only screen and (min-width: 1024px) {
+          .landing .bottom > .example-area > .examples {
+            text-align: left; } }
         .landing .bottom > .example-area > .examples > .header {
           box-sizing: border-box;
           font-size: 27px;
-          text-align: left;
+          text-align: inherit;
           height: auto;
           color: gray;
           padding: 60px 0px 20px 0px; }
@@ -7820,18 +7889,28 @@ md-tooltip {
           box-sizing: border-box; }
           .landing .bottom > .example-area > .examples .example .desc {
             display: inline-block;
-            width: 500px;
             padding: 20px 0px;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+            width: 500px; }
+            @media only screen and (max-width: 500px) {
+              .landing .bottom > .example-area > .examples .example .desc {
+                width: 100%; } }
           .landing .bottom > .example-area > .examples .example .body {
             display: inline-block;
             background: #474F59;
             padding: 20px;
             box-sizing: border-box;
+            border-radius: 5px;
             width: 500px;
             margin-bottom: 10px;
-            color: white;
-            border-radius: 5px; }
+            color: white; }
+            @media only screen and (max-width: 500px) {
+              .landing .bottom > .example-area > .examples .example .body {
+                width: 100%;
+                border-radius: 0;
+                line-height: 100px;
+                height: 140px;
+                vertical-align: middle; } }
   .landing .footer {
     padding: 0px 50px;
     background: url(../images/pipes.jpg);
@@ -7839,7 +7918,10 @@ md-tooltip {
     height: 400px;
     text-align: center; }
     .landing .footer > .row {
-      padding: 95px; }
+      padding: 90px 0; }
+      @media only screen and (max-width: 600px) {
+        .landing .footer > .row {
+          padding: 20px 0; } }
       .landing .footer > .row > .title {
         font-size: 35px;
         color: gray; }
@@ -7847,37 +7929,58 @@ md-tooltip {
         padding: 10px 50px;
         margin: 20px;
         background: #7cb28a; }
-    .landing .footer > .last > .social {
-      text-align: left;
-      padding-left: 30px; }
-      .landing .footer > .last > .social .buttons {
-        display: inline-block;
-        max-width: 400px; }
-    .landing .footer > .last > .copyright {
-      text-align: center;
-      padding-top: 20px;
-      color: gray; }
-    .landing .footer > .last > .logo {
-      font-family: "Fredoka One";
-      font-size: 25px;
-      color: #7cb28a;
-      background-repeat: no-repeat;
-      min-width: 94.4px;
-      min-height: 55.6px;
-      background-size: 94.4px 55.6px;
-      color: #F0F0F0;
-      text-align: right;
-      padding-right: 30px;
-      font-size: 50px;
-      margin-top: -10px;
-      background-position: right; }
-      .landing .footer > .last > .logo a {
-        text-decoration: none;
-        color: #7cb28a; }
-      .landing .footer > .last > .logo.white {
-        color: white; }
-        .landing .footer > .last > .logo.white a {
+    @media only screen and (max-width: 600px) {
+      .landing .footer > .last {
+        display: block; } }
+    .landing .footer > .last > .last-item {
+      line-height: 50px;
+      vertical-align: middle; }
+      @media only screen and (max-width: 600px) {
+        .landing .footer > .last > .last-item {
+          display: block;
+          margin-top: 20px;
+          margin-bottom: 0px; } }
+      .landing .footer > .last > .last-item.social {
+        text-align: left;
+        padding-left: 30px; }
+        @media only screen and (max-width: 600px) {
+          .landing .footer > .last > .last-item.social {
+            text-align: center;
+            padding-left: 0; } }
+        .landing .footer > .last > .last-item.social .buttons {
+          margin-top: 10px;
+          display: inline-block;
+          max-width: 400px; }
+      .landing .footer > .last > .last-item.copyright {
+        text-align: center;
+        color: gray; }
+        .landing .footer > .last > .last-item.copyright .text {
+          line-height: 20px;
+          margin-top: 10px; }
+      .landing .footer > .last > .last-item.logo {
+        font-family: "Fredoka One";
+        font-size: 25px;
+        color: #7cb28a;
+        background-repeat: no-repeat;
+        min-width: 94.4px;
+        min-height: 55.6px;
+        background-size: 94.4px 55.6px;
+        color: #F0F0F0;
+        text-align: right;
+        padding-right: 30px;
+        font-size: 50px;
+        background-position: right; }
+        .landing .footer > .last > .last-item.logo a {
+          text-decoration: none;
+          color: #7cb28a; }
+        .landing .footer > .last > .last-item.logo.white {
           color: white; }
+          .landing .footer > .last > .last-item.logo.white a {
+            color: white; }
+        @media only screen and (max-width: 600px) {
+          .landing .footer > .last > .last-item.logo {
+            text-align: center;
+            padding-right: 0; } }
 
 /*# sourceMappingURL=landing.css.map */
 

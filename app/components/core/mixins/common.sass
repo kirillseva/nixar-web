@@ -1,9 +1,29 @@
-@mixin logo
+$small: 320px
+$large: 1024px
+
+@import "./lib/compass"
+
+=screen($media)
+  @if $media == handhelds
+    @media only screen and (max-width: $small)
+      @content
+  @else if $media == medium-screens
+    @media only screen and (min-width: $small + 1) and (max-width: $large - 1)
+      @content
+  @else if $media == wide-screens
+    @media only screen and (min-width: $large)
+      @content
+
+
+//$global-color: #7cb28a
+$global-color: #7cb28a
+
+=logo
   //margin-top: 10px
   //font-family: 'Jura', cursive
   font-family: 'Fredoka One'
   font-size: 25px
-  color: #7cb28a
+  color: $global-color
   //color: transparent
   //font-weight: bold
   //background-image: url(../images/logo.png)
@@ -18,7 +38,7 @@
   background-size: $w2 $h2
   a
     text-decoration: none
-    color: #7cb28a
+    color: $global-color
   &.white
     //background-image: url(../images/logo-white.png)
     color: white
@@ -31,12 +51,19 @@
   .bar
     display: inline-block
     margin-bottom: 75px
+    @media only screen and (max-width: 600px)
+      margin-bottom: 25px
     text-align: left
     line-height: 50px
     vertical-align: middle
+    width: 1000px
+    @media only screen and (max-width: 1000px)
+      width: 100%
     .name
       padding: 7px 11px
-      margin-left: -24px
+      margin-left: -15px
+      @media only screen and (max-width: 1000px)
+        margin-left: 0px
       @include logo
       &.white
         color: white
@@ -45,16 +72,17 @@
       vertical-align: top
       display: inline-block
       font-size: 50px
-      width: 300px
+      //width: 300px
       height: 70px
     .menu
+      float: right
       line-height: 50px
       vertical-align: top
       display: inline-block
-      width: 700px
+      width: auto
       text-align: right
       .menu-item
-        padding: 15px
+        padding: 10px 15px
         display: inline-block
         cursor: pointer
         a

@@ -4,7 +4,6 @@ path = require('path');
 require('xonom').run(function($xonom){
   var tty, app;
   tty = require('tty.js');
-  console.log('1');
   app = tty.createServer({
     port: process.env.PORT || 80,
     users: [],
@@ -13,19 +12,13 @@ require('xonom').run(function($xonom){
     shell: 'bash'
   });
   app.use(require('body-parser').json());
-  $xonom.object('$router', app);
-  return console.log('2');
-}).run(__dirname + "/app/**/*.service.server.js").run(function(){
-  return console.log('3');
-}).run(__dirname + "/app/**/*.route.server.js").object('p', require('prelude-ls')).object('repo', {
+  app.get('doc', function(req, resp){
+    return resp.redirect('/#doc');
+  });
+  return $xonom.object('$router', app);
+}).run(__dirname + "/app/**/*.service.server.js").run(__dirname + "/app/**/*.route.server.js").object('p', require('prelude-ls')).object('repo', {
   commands: [],
   docs: []
-}).run(function(){
-  return console.log('4');
-}).run(path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + '/*').run(function(){
-  return console.log('5');
-}).run(path.resolve(__dirname, "../node_modules/nixar/docs") + '/*').run(function(){
-  return console.log('6');
-}).run(__dirname + "/xonom.route.js").run(function($router){
+}).run(path.resolve(__dirname, "../node_modules/nixar/compiled-commands") + '/*').run(path.resolve(__dirname, "../node_modules/nixar/docs") + '/*').run(__dirname + "/xonom.route.js").run(function($router){
   return $router.listen();
 });

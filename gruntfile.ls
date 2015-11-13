@@ -215,10 +215,10 @@ module.exports = (grunt)->
   const npm-tasks =
     * load: \bower-task
       register: \bower
-      configs: [\default]
+      configs: [\default, \headless]
     * load: \bower-concat
       register: \bower_concat
-      configs: [\default]
+      configs: [\default, \headless]
     * load: \ts
       register: \ts
       configs: []
@@ -226,8 +226,8 @@ module.exports = (grunt)->
       register: \livescript
       configs:
          * \default
-         * \dist
          * \debug
+         * \headless
     * load: \contrib-coffee
       register: \coffee
       configs: [\default]
@@ -235,48 +235,50 @@ module.exports = (grunt)->
       register: \jade
       configs:
         * \default
-        * \dist
         * \debug
+        * \headless
     * load: \ng-constant
       register: \ngconstant
-      configs:
-        * \dist
-        ...
+      configs: []
     * load: \angular-templates
       register: \ngtemplates
       configs: 
         * \default
-        * \dist
         * \debug
+        * \headless
     * load: \contrib-sass
       register: \sass:no_options
       configs: 
         * \default
-        * \dist
         * \debug
+        * \headless
     * load: \contrib-copy
       register: \copy
       configs: 
         * \default
         * \debug
+        * \headless
         ...
     * load: \xonom
       register: \xonom
       configs:
         * \default
         * \debug
+        * \headless
         ...
     * load: \ng-annotate
       register: \ngAnnotate
       configs:
         * \default
         * \debug
+        * \headless
         ...
     * load: \contrib-concat
       register: \concat
       configs:
         * \default
         * \debug
+        * \headless
         ...
     * load: \contrib-uglify
       register: \uglify
@@ -286,7 +288,7 @@ module.exports = (grunt)->
       configs: []
     * load: \shell
       register: \shell:start
-      configs: [\default]
+      configs: [\default, \headless]
     * load: \shell
       register: \shell:node
       configs: [\debug]
@@ -298,7 +300,7 @@ module.exports = (grunt)->
       configs:
          * \default
          * \debug
-         * ...
+         * \headless
     * load: \open
       register: \open
       configs: 
@@ -320,3 +322,4 @@ module.exports = (grunt)->
   
   load \default
   load \debug
+  load \headless

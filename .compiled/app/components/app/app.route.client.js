@@ -2,7 +2,7 @@
 angular.module('app').config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('landing');
   return $stateProvider.state('root', {
-    url: '/',
+    url: '',
     views: {
       '': {
         templateUrl: 'app',

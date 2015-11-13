@@ -271,11 +271,11 @@ module.exports = function(grunt){
     {
       load: 'bower-task',
       register: 'bower',
-      configs: ['default']
+      configs: ['default', 'headless']
     }, {
       load: 'bower-concat',
       register: 'bower_concat',
-      configs: ['default']
+      configs: ['default', 'headless']
     }, {
       load: 'ts',
       register: 'ts',
@@ -283,7 +283,7 @@ module.exports = function(grunt){
     }, {
       load: 'livescript',
       register: 'livescript',
-      configs: ['default', 'dist', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'contrib-coffee',
       register: 'coffee',
@@ -291,35 +291,35 @@ module.exports = function(grunt){
     }, {
       load: 'contrib-jade',
       register: 'jade',
-      configs: ['default', 'dist', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'ng-constant',
       register: 'ngconstant',
-      configs: ['dist']
+      configs: []
     }, {
       load: 'angular-templates',
       register: 'ngtemplates',
-      configs: ['default', 'dist', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'contrib-sass',
       register: 'sass:no_options',
-      configs: ['default', 'dist', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'contrib-copy',
       register: 'copy',
-      configs: ['default', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'xonom',
       register: 'xonom',
-      configs: ['default', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'ng-annotate',
       register: 'ngAnnotate',
-      configs: ['default', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'contrib-concat',
       register: 'concat',
-      configs: ['default', 'debug']
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'contrib-uglify',
       register: 'uglify',
@@ -331,7 +331,7 @@ module.exports = function(grunt){
     }, {
       load: 'shell',
       register: 'shell:start',
-      configs: ['default']
+      configs: ['default', 'headless']
     }, {
       load: 'shell',
       register: 'shell:node',
@@ -343,7 +343,7 @@ module.exports = function(grunt){
     }, {
       load: 'contrib-clean',
       register: 'clean',
-      configs: ['default', 'debug', []]
+      configs: ['default', 'debug', 'headless']
     }, {
       load: 'open',
       register: 'open',
@@ -367,5 +367,6 @@ module.exports = function(grunt){
   };
   grunt.loadNpmTasks('grunt-newer');
   load('default');
-  return load('debug');
+  load('debug');
+  return load('headless');
 };

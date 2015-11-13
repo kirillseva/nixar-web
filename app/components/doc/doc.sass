@@ -3,7 +3,7 @@
   padding: $t 15px
   
 
-$logo-color: #7cb28a
+$logo-color: $global-color
 $side-color: white
 $cont-color: white
 .doc
@@ -63,9 +63,13 @@ $cont-color: white
             background: #474F59
             height: 100%
           &.commands
+            //padding-top: 100px
+            //padding-bottom: 100px
             >.command
+              .name
+                color: $global-color
               &.bottom
-                min-height: 1000px
+                //min-height: 1000px
               &.program
                 >h2
                   //text-shadow: 0px 0px 10px #C52824

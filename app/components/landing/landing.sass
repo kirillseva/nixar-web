@@ -1,3 +1,5 @@
+
+
 @import "../core/mixins/common"
 @keyframes type
   from
@@ -34,7 +36,7 @@
   from 
     color: #CCC
   100% 
-    color: rgb(178, 243, 193)
+    color: $global-color
 
 @keyframes colorize-white
   from 
@@ -58,11 +60,11 @@
   animation-name: colorize-white
 
 .pipe
-  color: #C2DA99
+  color: $global-color
 .colored
   &:not(.code)
   @include colorize
-  //color: #C2DA99
+  //color: $global-color
   &.code
     @include colorize-white  
 .space
@@ -70,21 +72,39 @@
   min-width: 10px
 
 
+.fixed
+  color: $global-color
+  top: -65px
+  z-index: 999999
+  text-align: center
+  width: 100%
+  position: fixed
+  height: 65px
+  background-color: white
+  @include bar
+  transition: top .2s
+  box-shadow: 0px 0px 1px gray
+  &.active
+    top: 0px
+    transition: top .7s
+.background
+  position: fixed
+  top: 0px
+  left: 0px
+  background-size: cover
+  background-image: url(http://res.cloudinary.com/nixar-work/image/upload/v1444918309/polygons_llf5iv.png)
+  height: 750px
+  width: 100%
+  z-index: 0
 .landing
-  background: linear-gradient(135deg, rgba(123,178,138,0.95) 0%, rgba(248,248,156,0.95) 100%)
+  position: absolute
+  width: 100%
+  top: 0px
+  left: 0px
+  z-index: 1
+  //background: linear-gradient(135deg, rgba(123,178,138,0.95) 0%, rgba(248,248,156,0.95) 100%)
   //background-image: url(http://ashobiz.asia/boot-extended15/demo/img/back.jpg)
   //background-size: cover
-  .fixed
-    color: #7cb28a
-    top: -80px
-    z-index: 999999
-    text-align: center
-    width: 100%
-    position: fixed
-    height: 80px
-    background-color: white
-    @include bar
-    box-shadow: 0px 0px 1px gray
   .header
     text-align: center
     height: 100px
@@ -92,7 +112,7 @@
     //@include pad(0px)
     .navs 
       display: inline-block
-      width: 1000px
+      width: 100%
       color: white
       @include bar
       .text
@@ -108,6 +128,7 @@
           max-width: 250px
   .body
     position: relative
+    z-index: 1
     >.circle
       border-radius: 100px
       width: 100px
@@ -130,12 +151,14 @@
       .demo-terminal
         background: #474F59
         border-radius: 5px 5px 0px 0px
-        //box-shadow: 0px -2px 14px #D0CEE1
+        bax-shadow: rgba(51, 51, 51, 0.431373) 0px 0px 108px
         display: inline-block
         height: 450px
         transition: height .3s
         max-width: 1000px
         width: 1000px
+        @media only screen and (max-width: 1000px)
+          border-radius: 0px
         padding: 30px
         box-sizing: border-box
         text-align: left
@@ -175,9 +198,12 @@
             animation-delay: 5s
             animation-iteration-count: 1
   .bottom
+    position: relative
+    z-index: 2
     background: #FFF
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/ecailles.png)
     min-height: 700px
-    padding-bottom: 100px
+    //padding-bottom: 100px
     text-align: center
     //padding: 50px
     >.install
@@ -213,13 +239,15 @@
         text-align: center
         display: inline-block
         padding: 50px
+        box-sizing: border-box
+        $benefit-color: #0E99A4
         >.icon
           display: inline-block
           margin: 50px
           border-radius: 100px
           width: 100px
           height: 100px
-          background: #7cb28a
+          background: $benefit-color
           line-height: 100px
           vertical-align: middle
           color: white
@@ -254,7 +282,7 @@
                   margin-top: -8px
                   background: white
                   padding: 0px
-                  color: #7cb28a
+                  color: $benefit-color
         >.title
           font-size: 25px
         >.desc
@@ -264,11 +292,14 @@
       position: relative
       >.example-area-top
         position: absolute
+        
         top: 0px
         left: 0px
         width: 100%
         height: 10px
-        background-image: url(../images/bg-footer.png)
+        //+filter-gradient(transparent, #F0F0F0, vertical)
+        +background-image(linear-gradient(to bottom right, transparent, #F0F0F0))
+        //background-image: url(../images/bg-footer.png)
         background-repeat: repeat-x
       background-color: #F0F0F0
       background: -moz-linear-gradient(top,  rgba(240,240,240,1) 0%, rgba(255,255,255,1) 100%)
@@ -282,34 +313,51 @@
       padding-top: 30px 50px
       //background: rgba(249, 244, 244, 0.65)
       >.examples
-        text-align: left
+        +screen(handhelds)
+          text-align: center
+        +screen(medium-screens)
+          text-align: center
+        +screen(wide-screens)
+          text-align: left
         display: inline-block
         //width: 1000px
         box-sizing: border-box
         >.header
           box-sizing: border-box
           font-size: 27px
-          text-align: left
+          text-align: inherit
           height: auto
           color: gray
           padding: 60px 0px 20px 0px
         .example
           overflow: hidden
           box-sizing: border-box
+          $example-width: 500px
           .desc
             display: inline-block
-            width: 500px
             padding: 20px 0px
             box-sizing: border-box
+            width: $example-width
+            @media only screen and (max-width: $example-width)
+              width: 100%
           .body
+            $padding: 20px
             display: inline-block
             background: #474F59
-            padding: 20px
+            padding: $padding
             box-sizing: border-box
-            width: 500px
+            border-radius: 5px
+            width: $example-width
+            @media only screen and (max-width: $example-width)
+              $line-height: 100px
+              width: 100%
+              border-radius: 0
+              line-height: $line-height
+              height: $line-height + $padding * 2
+              vertical-align: middle
             margin-bottom: 10px
             color: white
-            border-radius: 5px
+  $phone-width: 600px        
   .footer
     padding: 0px 50px
     background: url(../images/pipes.jpg)
@@ -318,34 +366,55 @@
     //background: white
     text-align: center
     >.row
-      padding: 95px
+      padding: 90px 0
+      @media only screen and (max-width: $phone-width)
+        padding: 20px 0
       >.title
         font-size: 35px
         color: gray
       >.md-button
         padding: 10px 50px
         margin: 20px
-        background: rgb(124, 178, 138)
+        background: $global-color
     >.last
       //margin-bottom: 40px
-      >.social
-        text-align: left
-        padding-left: 30px
-        .buttons
-          display: inline-block
-          max-width: 400px
-      >.copyright
-        text-align: center
-        padding-top: 20px
-        color: gray
-      >.logo
-        @include logo
-        color: #F0F0F0
-        text-align: right
-        padding-right: 30px
-        //color: #BDBABA
-        font-size: 50px
-        margin-top: -10px
-        //background-image: url(../images/logo.png)
-        //background-repeat: no-repeat
-        background-position: right
+      @media only screen and (max-width: $phone-width)
+        display: block
+      >.last-item
+        line-height: 50px
+        vertical-align: middle
+        @media only screen and (max-width: $phone-width)
+          display: block
+          margin-top: 20px
+          margin-bottom: 0px
+        &.social
+          text-align: left
+          padding-left: 30px
+          @media only screen and (max-width: $phone-width)
+            text-align: center
+            padding-left: 0
+          .buttons
+            margin-top: 10px
+            display: inline-block
+            max-width: 400px
+        &.copyright
+          text-align: center
+          color: gray
+          .text
+            line-height: 20px
+            margin-top: 10px
+        &.logo
+          @include logo
+          //529px
+          color: #F0F0F0
+          text-align: right
+          padding-right: 30px
+          @media only screen and (max-width: $phone-width)
+            text-align: center
+            padding-right: 0
+          
+          //color: #BDBABA
+          font-size: 50px
+          //background-image: url(../images/logo.png)
+          //background-repeat: no-repeat
+          background-position: right

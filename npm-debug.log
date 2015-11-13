@@ -1,0 +1,147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/bin/node',
+1 verbose cli   '/mnt/shared/sbin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'enclose' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.28
+4 verbose cache add [ 'enclose', null ]
+5 verbose cache add name=undefined spec="enclose" args=["enclose",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'enclose',
+6 verbose parsed url   path: 'enclose',
+6 verbose parsed url   href: 'enclose' }
+7 silly lockFile 13531957-enclose enclose
+8 verbose lock enclose /home/ubuntu/.npm/13531957-enclose.lock
+9 silly lockFile 13531957-enclose enclose
+10 silly lockFile 13531957-enclose enclose
+11 verbose addNamed [ 'enclose', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d3d35a40-enclose enclose@
+14 verbose lock enclose@ /home/ubuntu/.npm/d3d35a40-enclose.lock
+15 silly addNameRange { name: 'enclose', range: '*', hasData: false }
+16 verbose url raw enclose
+17 verbose url resolving [ 'https://registry.npmjs.org/', './enclose' ]
+18 verbose url resolved https://registry.npmjs.org/enclose
+19 info trying registry request attempt 1 at 20:00:42
+20 verbose etag "9FLLFYQDT0R7SIIUE9R5YPUK6"
+21 http GET https://registry.npmjs.org/enclose
+22 http 304 https://registry.npmjs.org/enclose
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Thu, 12 Nov 2015 20:00:42 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=60',
+23 silly registry.get     etag: '"9FLLFYQDT0R7SIIUE9R5YPUK6"',
+23 silly registry.get     age: '0',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-lcy1124-LCY',
+23 silly registry.get     'x-cache': 'MISS',
+23 silly registry.get     'x-cache-hits': '0',
+23 silly registry.get     'x-timer': 'S1447358442.564644,VS0,VE1188',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag enclose from cache
+25 silly addNameRange number 2 { name: 'enclose', range: '*', hasData: true }
+26 silly addNameRange versions [ 'enclose',
+26 silly addNameRange   [ '0.0.0',
+26 silly addNameRange     '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '0.0.6',
+26 silly addNameRange     '0.0.7',
+26 silly addNameRange     '0.0.8',
+26 silly addNameRange     '0.0.9',
+26 silly addNameRange     '0.0.10',
+26 silly addNameRange     '0.0.12',
+26 silly addNameRange     '0.0.14',
+26 silly addNameRange     '0.0.15',
+26 silly addNameRange     '0.0.16',
+26 silly addNameRange     '0.0.17',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '0.2.4',
+26 silly addNameRange     '0.2.5',
+26 silly addNameRange     '0.2.6',
+26 silly addNameRange     '0.2.7',
+26 silly addNameRange     '0.2.8',
+26 silly addNameRange     '0.2.9',
+26 silly addNameRange     '0.2.10',
+26 silly addNameRange     '0.2.11',
+26 silly addNameRange     '0.2.12',
+26 silly addNameRange     '0.2.14',
+26 silly addNameRange     '0.2.15',
+26 silly addNameRange     '0.2.16',
+26 silly addNameRange     '0.2.17',
+26 silly addNameRange     '0.2.18',
+26 silly addNameRange     '0.2.19',
+26 silly addNameRange     '0.2.20',
+26 silly addNameRange     '0.2.21',
+26 silly addNameRange     '0.2.22',
+26 silly addNameRange     '0.2.23',
+26 silly addNameRange     '0.2.24',
+26 silly addNameRange     '0.2.25',
+26 silly addNameRange     '0.2.26',
+26 silly addNameRange     '0.2.27',
+26 silly addNameRange     '0.2.28',
+26 silly addNameRange     '0.2.29',
+26 silly addNameRange     '0.2.30' ] ]
+27 verbose addNamed [ 'enclose', '0.2.30' ]
+28 verbose addNamed [ '0.2.30', '0.2.30' ]
+29 silly lockFile f5ceb48d-enclose-0-2-30 enclose@0.2.30
+30 verbose lock enclose@0.2.30 /home/ubuntu/.npm/f5ceb48d-enclose-0-2-30.lock
+31 silly lockFile f5ceb48d-enclose-0-2-30 enclose@0.2.30
+32 silly lockFile f5ceb48d-enclose-0-2-30 enclose@0.2.30
+33 silly lockFile d3d35a40-enclose enclose@
+34 silly lockFile d3d35a40-enclose enclose@
+35 silly resolved [ { name: 'enclose',
+35 silly resolved     version: '0.2.30',
+35 silly resolved     description: 'Compile your node.js project into an executable',
+35 silly resolved     bin: { enclose: 'bin/enclose.js' },
+35 silly resolved     main: 'bin/enclose.js',
+35 silly resolved     scripts: { postinstall: 'node postinstall.js' },
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'https://github.com/igorklopov/enclose.git' },
+35 silly resolved     keywords: [ 'node', 'compile', 'bundle', 'nexe' ],
+35 silly resolved     author: { name: 'Igor Klopov', email: 'igor@klopov.com' },
+35 silly resolved     bugs: { url: 'https://github.com/igorklopov/enclose/issues' },
+35 silly resolved     homepage: 'https://github.com/igorklopov/enclose',
+35 silly resolved     dependencies: { async: '^0.9.0' },
+35 silly resolved     readme: '# EncloseJS\n\nCompile your node.js project into an executable\n\n[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/igorklopov/enclose?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n![Hello, world!](http://enclosejs.com/screenshot.png)\n\n### Use cases\n\n* Make a commercial version of your application without sources\n* Make a demo/evaluation/trial version of your app without sources\n* Make some kind of self-extracting archive or installer\n* Make a closed source GUI application using [node-thrust](https://github.com/breach/node-thrust)\n* No need to install node.js and npm to deploy the compiled application\n* No need to download hundreds of files via `npm install` to deploy\nyour application. Deploy it as a single independent file\n* Put your assets inside the executable to make it even more portable\n* Test your app against new node.js version without installing it\n\n### Install\n\n```\nnpm install -g enclose\n```\n\n### Usage\n\n```\nenclose --help\n```\n\nIn short, as input you specify the entry file of your project\n`/path/project.js`. As output you get a standalone executable\n`/path/project`. When it is run, it does the same as\n`node /path/project.js`.\n\n### Command line of the executable\n\nCommand line call `./project a b` is equivalent to `node ./project.js a b`.\n\n### Dependencies\n\nThe compiler parses your sources, detects calls to `require`, traverses\nthe dependencies of your project and includes them into the executable.\nYou don\'t need to list them manually.\n\n### Assets\n\nIf your project has assets (html templates, css, etc), for example to\nserve via http, you can bundle them into the executable. Just list them\nas a [glob](https://github.com/sindresorhus/globby) in the configuration\nfile.\n\n### Compilation? Srsly?\n\nBoth Yes and No.\n\nYes. Because JavaScript code is transformed into native code at\ncompile-time using\n[V8 internal compiler](https://github.com/v8/v8-git-mirror/blob/master/src/compiler.cc).\nHence, your sources are not required to execute the binary, and they\nare not packaged.\n\nNo. Optimized native code can be generated only at run-time, using\ninformation collected at run-time. Without that information EncloseJS\ncan generate only "unoptimized" code. It runs about 2x slower, than\noptimized one.\n\nAlso, node.js code is put inside the executable (along with your code)\nto support node.js API for your application at run-time. This increases\noutput file size.\n\nSo, this is not that static compilation we used to know. But nevertheless\nyou get fully functional binary without sources. Also, performance and\nfile size overhead are vectors of future work.\n\n### Code protection?\n\nThe code protection is as strong as possible when the sources are\ncompiled to native code. Hackers will deal with\n[that push-mov stuff](https://github.com/v8/v8-git-mirror/blob/master/src/x87/full-codegen-x87.cc#L1110).\nNo need to obfuscate, no need to encrypt, no "hidden" decryption keys.\nAlso\n\n```\nmyfunc.toString()\nfunction myfunc() { [native code] }\n```\n\n### Node.js and io.js\n\nYou can choose what runtime to wrap your project in - node.js 0.12.x or\nio.js. Both branches are supported.\n\n### Vanilla node.js\n\nEncloseJS project does not aim to add new features to node.js - to\navoid undesirable issues, to have predictable stability and to make\nnode.js native modules compatible with enclosed executables.\n\n### Fast\n\nIt takes seconds to make an executable. You dont need to build\nnode.js/io.js from sources in order to make the binary. EncloseJS is\nshipped with precompiled parts, ready for bundling.\n\n### Compatibility with non-enclosed run\n\nProjects like `npm`, `browserify`, `eslint` can be compiled using EncloseJS (see\n[examples directory](https://github.com/igorklopov/enclose/tree/master/examples/22-npm)).\nProbably, your existing project can be compiled too, with minimal\nadjustments. The adjustments preserve the ability to run you project\nvia `node ./project.js`\n\n### Platforms\n\nEncloseJS can build executables for Linux, Windows and Mac OS X.\nCross compilation is not currently supported.\n\n### Native modules\n\nNative modules (.node files) are supported for all platforms\n([more info](https://github.com/igorklopov/enclose/issues/12#issuecomment-82587865),\n[serialport example](https://github.com/igorklopov/enclose/tree/master/examples/24-serialport),\n[oracle example](https://github.com/igorklopov/enclose/tree/master/examples/25-oracle)).\n\n- EncloseJS cannot package a native module inside the executable.\n- You have to deploy your native modules along with your final\nexecutable, and `require` that native module at runtime.\n- You have to compile native module against node.js 0.12.x or current io.js.\n- If you are having trouble porting your native module, use [NAN](https://github.com/rvagg/nan).\n- On Windows, native module (built with node-gyp) requires executable\nname to be \'node.exe\'. So in order to make it compatible with your\n\'myserver.exe\' EncloseJS makes a copy of the native module, patches\nIAT of the copy (binds it to \'myserver.exe\'), and then calls `dlopen`\nagainst the copy.\n\n### License\n\nProprietary. Free for non-commercial use. To use in commercial\nprojects please contact me igor@klopov.com\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     _id: 'enclose@0.2.30',
+35 silly resolved     _from: 'enclose@' } ]
+36 info install enclose@0.2.30 into /nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib
+37 info installOne enclose@0.2.30
+38 info /nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose unbuild
+39 info /nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose unbuild
+40 error error rolling back Error: EROFS, unlink '/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose'
+40 error error rolling back  enclose@0.2.30 { [Error: EROFS, unlink '/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose']
+40 error error rolling back   errno: 56,
+40 error error rolling back   code: 'EROFS',
+40 error error rolling back   path: '/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose' }
+41 error Error: EROFS, unlink '/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose'
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Linux 4.2.0-c9
+44 error command "/nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/bin/node" "/mnt/shared/sbin/npm" "install" "-g" "enclose"
+45 error cwd /home/ubuntu/workspace
+46 error node -v v0.10.28
+47 error npm -v 1.4.3
+48 error path /nix/store/a5ibcbcsm473kdr75kj4gpsr28ndnknp-nodejs-0.10.26/lib/node_modules/enclose
+49 error code EROFS
+50 error errno 56
+51 verbose exit [ 56, true ]

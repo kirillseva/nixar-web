@@ -8,7 +8,8 @@ angular
            win = $(window)
            win.scroll ->
               pos = win.scroll-top!
-              h = -80 + pos / 5
-              $(\.fixed).css(\top, if h < 0 then h else 0)
-              s = 450 - pos * 2
-              $(\.demo-terminal).css(\height, if s > 0 then s else 0)
+              if pos < 100 
+              then
+                $(\.fixed).remove-class(\active)
+              else
+                $(\.fixed).add-class(\active)

@@ -13,6 +13,7 @@ angular.module do
 angular
   .module \app
   .config ($location-provider, $md-theming-provider)->
+     $locationProvider.html5Mode(true)
      $mdThemingProvider.definePalette do 
        *  \amazingPaletteName
        *  '50': 'ffebee'
