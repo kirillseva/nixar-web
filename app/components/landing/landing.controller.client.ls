@@ -56,7 +56,7 @@ angular
                   * 'db3.log colored(2000000) bytes'
                   * 'db4.log colored(1900000) bytes'
                   * 'db5.log colored(1500000) bytes'
-            * desc: 'Fine latest changed files'
+            * desc: 'Find latest changed files'
               body: 'fs all | file modified | sort 1 | take 5'
               result:
                   * 'db1.log colored(5) days ago'
@@ -64,7 +64,7 @@ angular
                   * 'db3.log colored(4) days ago'
                   * 'db4.log colored(3) days ago'
                   * 'db5.log colored(2) days ago'
-            * desc: 'Fine file recursively by part of filename and content'
+            * desc: 'Find file recursively by part of filename and content'
               body: 'fs **/u*r.js | file lines | filter word'
               result: 
                   * 'colored(user.js): this colored(word) is found inside user.js file'
